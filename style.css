@@ -6,30 +6,32 @@
 
 
 /* Main body formatting */
-body {
+html {
+    margin: 0px auto 0px auto;
     font-family: 'Metrophobic', sans-serif;
     background-color: white;
     background: url(https://images.pexels.com/photos/1432942/pexels-photo-1432942.jpeg?cs=srgb&dl=cheerful-colleagues-digital-device-1432942.jpg&fm=jpg) 
     no-repeat center center fixed;
     background-size: cover;
-    width: 60%;
+    /*width: 60%;*/
     padding: 0px;
     
 }
 
 div.box {
+    padding: 5px;
     background-color: rgba(210, 180, 140, 0.7);
     margin-top: 20%;
-    margin-left:50%;
-    margin-right:50%;
-    width: 90%;
-    height: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
     border: 2px solid white;
     border-radius: 20px;
 }
 
 
-/* Use for centering items */
+/* default formatting */
 .align-center {
     display: block;
     margin: auto;
@@ -37,6 +39,12 @@ div.box {
     text-align: center;
 }
 
+.largeText {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/*Title and header*/
 header{
    text-align: center;
 }
@@ -51,38 +59,11 @@ h2 {
     width: 100%;
 }
 
-/* Current Question and Score*/
-.largeText {
-    font-weight: bold;
-    font-size: 24px;
-}
-.score {
-    position: relative;
-    width: 60%;
-    margin-top: 10px;
-  }
-
-  .onQuestion, .scoreTotal {
-    position: absolute;
-    top: 0px;
-    bottom: 10px;
-    margin: auto;
-  }
-
-  .onQuestion {
-    left: 0;
-    margin-left: -15px;
-  }
-
-  .scoreTotal {
-    right: 0;
-    margin-right: -15px;
-  }
-
 /*Radio Button box*/ 
 main {
     width: 80%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 form {
@@ -158,4 +139,16 @@ input.button:hover, .nextButton:hover, .startButton:hover{
 
   legend {
       text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    div.box {
+      height:670px;
+      width: 90%;
+    }
+    
+    .score {
+        display: block;
+        flex-direction: column;
+    }
   }
