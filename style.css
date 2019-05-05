@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Main body formatting */
+body {
+    font-family: 'Metrophobic', sans-serif;
+    background-color: white;
+    background: url(https://images.pexels.com/photos/1432942/pexels-photo-1432942.jpeg?cs=srgb&dl=cheerful-colleagues-digital-device-1432942.jpg&fm=jpg) 
+    no-repeat center center fixed;
+    background-size: cover;
+    width: 60%;
+    padding: 0px;
+    
+}
+
+div.box {
+    background-color: rgba(210, 180, 140, 0.7);
+    margin-top: 20%;
+    margin-left:50%;
+    margin-right:50%;
+    width: 90%;
+    height: 520px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+
+/* Use for centering items */
+.align-center {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+}
+
+header{
+   text-align: center;
+}
+
+h1 {
+    width: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2 {
+    width: 100%;
+}
+
+/* Current Question and Score*/
+.largeText {
+    font-weight: bold;
+    font-size: 24px;
+}
+.score {
+    position: relative;
+    width: 60%;
+    margin-top: 10px;
+  }
+
+  .onQuestion, .scoreTotal {
+    position: absolute;
+    top: 0px;
+    bottom: 10px;
+    margin: auto;
+  }
+
+  .onQuestion {
+    left: 0;
+    margin-left: -15px;
+  }
+
+  .scoreTotal {
+    right: 0;
+    margin-right: -15px;
+  }
+
+/*Radio Button box*/ 
+main {
+    width: 80%;
+    margin: auto;
+}
+
+form {
+    margin-top: 10%;
+}
+
+ol {
+    list-style-type: upper-alpha;
+}
+
+li {
+    margin-left: 2em;
+    list-style-type: none;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+}
+
+.correct {
+    color: darkgreen;
+}
+
+.incorrect {
+    color: darkred;
+}
+
+input[type="radio"] {
+    margin-right: 15px;
+}
+
+label {
+    font-size: 24px;
+}
+
+/* Start, Submit, Next buttons */
+
+.startButton, .restartButton {
+    margin-top: 10px;
+    padding: 12px 28px;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: rgba(210, 180, 140, 0.8);
+    border: 2px solid white;
+    outline-color: white;
+}
+
+
+.nextButton, input.button {
+    margin-bottom: 5%;
+    padding: 12px 28px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: rgba(210, 180, 140, 0.8);
+    border: 2px solid white;
+    outline-color: white;
+}
+
+input.button:hover, .nextButton:hover, .startButton:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+  }
+
+  fieldset {
+      border: 2px solid white;
+      border-radius: 20px;
+      padding: 10px;
+      font-weight: bold;
+  }
+
+  legend {
+      text-align: center;
+  }
