@@ -149,7 +149,7 @@ function replaceRadioButtonsWithPicture(){
     //depending on the question number display approriate picture
     switch (QUIZ.currentQuestion) {
         case 0:
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/Monitor.png" alt="Picture of a computer monitor" height="50" width="50">`);
+    $('ul').addClass('picture align-center').html(`<img src="images/Monitor.png">`);
         break;
         case 8:
     $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/browsers.jpg" alt="Picture of a computer monitor" height="50" width="50">`);
