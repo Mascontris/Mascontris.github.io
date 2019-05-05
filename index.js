@@ -1,6 +1,6 @@
 // start Quiz
 function startQuiz(){
-    $('form').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/Quiz.png" alt="Picture of a yellow road sign that says Ooops" height="100" width="100">`)
+    $('form').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Quiz.png" alt="Picture of a yellow road sign that says Ooops" height="100" width="100">`)
     generateButton()
     $('header').on('click', '.startButton', function(){     
         hideButton();
@@ -149,40 +149,40 @@ function replaceRadioButtonsWithPicture(){
     //depending on the question number display approriate picture
     switch (QUIZ.currentQuestion) {
         case 0:
-    $('ul').addClass('picture align-center').html(`<img src="images/Monitor.png">`);
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Monitor.png">`);
         break;
         case 8:
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/browsers.jpg" alt="Picture of a computer monitor" height="50" width="50">`);
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/browsers.jpg" alt="Picture of a computer monitor" height="50" width="50">`);
         break;
         case 1:
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/Computer.png" alt="Picture of a computer monitor" height="50" width="50">`);
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Computer.png" alt="Picture of a computer monitor" height="50" width="50">`);
         break;
         case 6:   
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/ISP.jpg" alt="Picture of a computer monitor" height="50" width="50">`)
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/ISP.jpg" alt="Picture of a computer monitor" height="50" width="50">`)
         break;
         case 9:   
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/Java.png" alt="Picture of a computer monitor" height="50" width="50">`)
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Java.png" alt="Picture of a computer monitor" height="50" width="50">`)
         break;
         case 2:
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/Motherboard.png" alt="Picture of a computer monitor" height="50" width="50">`)
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Motherboard.png" alt="Picture of a computer monitor" height="50" width="50">`)
         break;
         case 5:    
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/Terminal.png" alt="Picture of a computer monitor" height="100" width="100">`)
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Terminal.png" alt="Picture of a computer monitor" height="100" width="100">`)
         break;
         case 4:    
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/USB.png" alt="Picture of a computer monitor" height="50" width="50">`)
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/USB.png" alt="Picture of a computer monitor" height="50" width="50">`)
         break;
         case 7:   
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/WWW.png" alt="Picture of a computer monitor" height="50" width="50">`)
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/WWW.png" alt="Picture of a computer monitor" height="50" width="50">`)
         break;
         case 3:   
-    $('ul').addClass('picture align-center').html(`<img src="/Users/gnmr/projects/Quiz App/images/IP.png" alt="Picture of a computer monitor" height="50" width="50">`)
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/IP.png" alt="Picture of a computer monitor" height="50" width="50">`)
     }
 }
 
 function incorrectPicture(){
     $('ul').addClass('picture align-center').html(
-        `<img src="/Users/gnmr/projects/Quiz App/images/Oops.png" alt="Picture of a yellow road sign that says Ooops" height="50" width="50">`
+        `<img src="https://mascontris.github.io/images/Oops.png" alt="Picture of a yellow road sign that says Ooops" height="50" width="50">`
     )
 }
 
