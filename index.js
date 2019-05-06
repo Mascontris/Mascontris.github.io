@@ -68,6 +68,10 @@ function generateQuestion(question){
 $(function evalSelection(){
     $('main').on('submit', 'form', function(event){
             event.preventDefault();
+    if (!$("input[type=radio]:checked").val()) {
+        alert('Please make a selection!');
+        }else
+            {
             hideQuestion();
             showResponse();
             let selected = $('input[name="answer"]:checked');
@@ -85,6 +89,7 @@ $(function evalSelection(){
                 displayIncorrect(correctAnswer);
             
            }
+        }
         })
 })
 
@@ -170,7 +175,7 @@ function replaceRadioButtonsWithPicture(){
     $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Monitor.png" alt="Picture of a computer monitor">`);
         break;
         case 8:
-    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/browsers.jpg" alt="Picture of different browsers">`);
+    $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/browsers.png" alt="Picture of different browsers">`);
         break;
         case 1:
     $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Computer.png" alt="Picture of a computer">`);
