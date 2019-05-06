@@ -30,7 +30,7 @@ function hideButton(){
 function generateButton(){
     if (QUIZ.currentQuestion == 0) {
         console.log("generate start Button")
-        $('.mainButton').html(`<button type="button" class="startButton">Start Quiz</button>`);
+        $('.mainButton').html(`<button type="button" class="startButton">Start</button>`);
     }
     else {
         console.log("generate restart Button")
@@ -68,6 +68,8 @@ function generateQuestion(question){
 $(function evalSelection(){
     $('main').on('submit', 'form', function(event){
             event.preventDefault();
+            hideQuestion();
+            showResponse();
             let selected = $('input[name="answer"]:checked');
             let answerIndex = selected.val();
             let question = getCurrentQuestion();
@@ -85,6 +87,21 @@ $(function evalSelection(){
            }
         })
 })
+
+function hideQuestion(){
+    console.log('hideQuestion ran')
+    $("legend").hide();
+}
+
+function hideResponse(){
+    console.log('hideResponse ran')
+    $('h2').hide();
+}
+
+function showResponse(){
+    console.log('showResponse ran')
+    $('h2').show();
+}
 
 //if answer was correct adjust score and run generate Correct Page function.
 function displayCorrect(){
@@ -140,6 +157,7 @@ $(function nextQuestion(){
             console.log('nextQuestion ran')
             QUIZ.currentQuestion += 1
             displayCurrentQuestion();
+            hideResponse();
     })
 })
 

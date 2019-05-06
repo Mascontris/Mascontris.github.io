@@ -31,7 +31,7 @@ const QUIZ = {
             text: "Ram"
           },
           {
-            text: "All of the above?",
+            text: "All of the above",
             isCorrect: true
           }
         ]
@@ -55,7 +55,7 @@ const QUIZ = {
         ]
       },
       {
-        text: "What is a binary number that uniquely identifies a host computer connected to the Internet.",
+        text: "What is a binary number that uniquely identifies a host computer connected to the Internet?",
         answers: [
           {
             text: "POST"
@@ -160,7 +160,7 @@ const QUIZ = {
             text: "Opera"
           },
           {
-              text: "All of the above are.",
+              text: "All of the above",
               isCorrect: true
           }
         ]
