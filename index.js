@@ -111,10 +111,10 @@ function showResponse(){
 //if answer was correct adjust score and run generate Correct Page function.
 function displayCorrect(){
     console.log("displayCorrect ran")
-    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-1) {
+    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-9) {
         console.log("end of quiz")
         generateCorrectPage();
-        quizEnd();
+        lastPage();
     }
     else {
     generateCorrectPage();
@@ -132,10 +132,10 @@ function generateCorrectPage(){
 
 //if answer was incorrect adjust score and run generate incorrect page.
 function displayIncorrect(correctAnswer){
-    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-1) {
+    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-9) {
         console.log("end of quiz");
         generateIncorrectPage(correctAnswer);
-        quizEnd();
+        lastPage();
     }
     else {
     generateNextButton();
@@ -209,12 +209,57 @@ function incorrectPicture(){
     )
 }
 
+//last page after quiz ends
+function lastPage(){
+    console.log('lastPage ran');
+    genSeeResultsButton();
+    $('main').on('click', '.results', function(){ 
+        hideResponse();
+        $('h1').hide();
+        $(".onQuestion").html(`The results are in, You got a score of: ${QUIZ.numberCorrect}`)
+        uniqueResponse();
+        quizEnd();
+    })
+}
+
+function genSeeResultsButton() {
+    $('input.button').addClass('results').attr('type', 'button').attr('value', 'See Results');
+}
+
+//generate response at end of quiz dependent on number of answers that were correct
+function uniqueResponse(){
+    switch (QUIZ.numberCorrect) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+            $(".scoreTotal").html('You need to study up on your PC knowledge.')
+            $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/bsod.png" alt="Picture of the dreaded blue screen of death.">`)
+            break;
+        case 4:
+        case 5:
+        case 6:
+            $(".scoreTotal").html('Not bad, but you should try again.')
+            $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Scotty.gif" alt="Gif of Scotty from Star Trek talking into a computer mouse.">`)
+            break;
+        case 7:
+        case 8:
+        case 9:
+            $(".scoreTotal").html('Almost! I think you can get a perfect score next time.')
+            $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Geek.png" alt="Picture of the geek squad car with two geeks in front of it.">`)
+            default:
+            $(".scoreTotal").html('Wow amazing job! you got them all right.')
+            $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/PCguy.png" alt="Picture of a PC superhero call PCguy.">`)
+    }
+}
+
 function quizEnd(){
     console.log("reached end of quiz")
     $("input").hide();
     generateButton();
     restartQuiz();
 }
+
 //When at end of QUIZ listens to restartQuiz click
 function restartQuiz(){
     $('header').on('click', '.restartButton', function(){     
