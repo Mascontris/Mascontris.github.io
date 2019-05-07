@@ -111,7 +111,7 @@ function showResponse(){
 //if answer was correct adjust score and run generate Correct Page function.
 function displayCorrect(){
     console.log("displayCorrect ran")
-    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-9) {
+    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-1) {
         console.log("end of quiz")
         generateCorrectPage();
         lastPage();
@@ -132,7 +132,7 @@ function generateCorrectPage(){
 
 //if answer was incorrect adjust score and run generate incorrect page.
 function displayIncorrect(correctAnswer){
-    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-9) {
+    if (QUIZ.currentQuestion == ((QUIZ.questions).length)-1) {
         console.log("end of quiz");
         generateIncorrectPage(correctAnswer);
         lastPage();
