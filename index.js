@@ -247,6 +247,7 @@ function uniqueResponse(){
         case 9:
             $(".scoreTotal").html('Almost! I think you can get a perfect score next time.')
             $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/Geek.png" alt="Picture of the geek squad car with two geeks in front of it.">`)
+            break;
             default:
             $(".scoreTotal").html('Wow amazing job! you got them all right.')
             $('ul').addClass('picture align-center').html(`<img src="https://mascontris.github.io/images/PCguy.png" alt="Picture of a PC superhero call PCguy.">`)
